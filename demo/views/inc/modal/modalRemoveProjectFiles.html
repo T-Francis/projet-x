@@ -1,0 +1,24 @@
+<!-- Modale suppression de collaborateur-->
+<div class="modal fade" id="modalRemoveProjectFiles">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-white" style="background-color: #007bff">
+                <h5 class="modal-title">Suppression du fichiers</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" id="closeCross">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="traitement.php">
+                    <p>
+                        Etes-vous sur de vouloir supprimer le fichier ?
+                    </p>
+                </form>
+                <div class="modal-footer col-md-12">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset">Fermer sans supprimer</button>
+                    <button type="button" class="btn btn-danger">Suppression</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

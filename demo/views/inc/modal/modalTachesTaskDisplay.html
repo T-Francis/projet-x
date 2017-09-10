@@ -1,0 +1,55 @@
+<!-- Modal afficher tache-->
+<div class="modal fade" id="modalDisplayTache">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header text-white" style="background-color: #007bff">
+				<h5 class="modal-title" id="infoTache"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group row">
+						<label for="affNomTache" class="form-control-label col-md-3"><b>Nom tache</b></label>
+						<span class="col-md-9" id="affNomTache"></span>
+					</div>
+					<div class="form-group row">
+						<label for="affDescTache" class="form-control-label col-md-3"><b>Description tache</b></label>
+						<span class="col-md-9" id="affDescTache"></span>
+					</div>
+					<div class="form-group row">
+						<label for="projetLie" class="form-control-label col-md-3"><b>Projet lié</b></label>
+						<span class="col-md-9" id="projetLie"></span>
+					</div>
+					<div class="form-group row">
+						<label for="dateDtache" class="form-control-label col-md-3" ><b>Date de début</b></label>
+						<span class="col-md-9" id="dateDtache"></span>
+					</div>
+					<div class="form-group row">
+						<label for="dateFtache" class="form-control-label col-md-3" ><b>Date de fin</b></label>
+						<span class="col-md-9" id="dateFtache"></span>
+					</div>
+					<div class="form-group row">
+						<label for="affPrio" class="form-control-label col-md-3" ><b>Niveau priorité</b></label>
+						<span class="col-md-9" id="affPrio"></span>
+					</div>
+					<div class="form-group row">
+						<label for="affAv" class="form-control-label col-md-3" ><b>Avancement</b></label>
+						<span class="col-md-9" id="affAv"></span>
+					</div>
+					<div class="form-group row">
+						<label for="affColls" class="form-control-label col-md-3" ><b>Collaborateurs</b></label>
+						<span class="col-md-9" id="affColls"></span>
+					</div>
+
+					<div class="modal-footer col-md-12">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+						<button type="button" class="btn btn-info" id="editerTache">Editer</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>

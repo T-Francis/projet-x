@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Profil</title>
+		<!-- ======================**CSS**===================== -->
+		<link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/jquery-ui-1.12.1/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/DataTables/datatables.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/DataTables/DataTables-1.10.15/css/dataTables.bootstrap4.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/ionicons-2.0.1/css/ionicons-2.0.1.min.css"/>
+		<!-- CORE -->
+		<link rel="stylesheet" type="text/css" href="/projetx/demo/css/core.css">
+		<!-- CURRENT INTERFACE CSS -->
+		<link rel="stylesheet" type="text/css" href="/projetx/demo/css/profil.css">
+	</head>
+	<body>
+		<!-- NAVBAR INCLUDE -->
+		<span id="navInc"></span>
+		<!-- Container -->
+		<div class="card">
+			<h4 class="card-header bg-primary text-white">Mon profil</h4>
+			<div class="card-body" style="padding-top: 20px;">
+				<div class="card-deck d-flex justify-content-start">
+					<div class="card col-lg-6" id="infoPerso">
+						<h5 class="card-header">Mes informations personelles</h5>
+						<div class="card-body">
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<!--  -->
+									<div class="text-center" style="margin-bottom: 30px">
+										<img src="/projetx/demo/images/avatars/man/dominique.png" style="width: 200px;"class="" alt="avatar">
+										<h6>Uploader une photo différente...</h6>
+										<input type="file" class=".form-control-file" accept="image/*">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-3 control-label">Nom</label>
+									<div class="col-lg-8">
+										<input class="form-control" type="text" value="Mas">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-lg-3 control-label">Prénom</label>
+									<div class="col-lg-8">
+										<input class="form-control" type="text" value="Dominique">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-lg-3 control-label">Email:</label>
+									<div class="col-lg-8">
+										<input class="form-control" type="text" value="dominique.mas@afpa-lab.com">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-3 control-label">Mot de passe:</label>
+									<div class="col-md-8">
+										<input class="form-control" type="password" value="11111122333">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-3 control-label">Confirmer mot de passe:</label>
+									<div class="col-md-8">
+										<input class="form-control" type="password" value="11111122333">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-3 control-label">Compétences</label>
+									<div class="col-md-8">
+										<textarea class="form-control" rows="3">Java, Java EE, UML, méthode Agile</textarea>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-md-3 control-label"></label>
+									<div class="col-md-8">
+										<input type="button" class="btn btn-success float-right" value="Sauvegarder">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<table class="col-lg-6 table table-responsive table-striped" id="table-amis-coll">
+						<thead>
+							<tr>
+								<th>Photo</th>
+								<th data-priority="1">Nom</th>
+								<th>Prenom</th>
+								<th>E-mail</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+			<!-- FOOTER INCLUDE -->
+			<span id="footerInc"></span>
+			<!-- ======================**JS**===================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="/projetx/demo/librairies/jQuery-3.2.1/jQuery-3.2.1.min.js" type="text/javascript"></script>
+			<script src="/projetx/demo/librairies/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+			<script src="/projetx/demo/librairies/DataTables/datatables.min.js" type="text/javascript"></script>
+			<script src="/projetx/demo/librairies/DataTables/DataTables-1.10.15/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+			<script src="/projetx/demo/librairies/moment.js-2.18.1/moment-with-locales-2.18.min.js" type="text/javascript"></script>
+			<script src="/projetx/demo/librairies/tether-1.4.0/tether-1.4.0.min.js" type="text/javascript"></script>
+			<script src="/projetx/demo/librairies/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+			<!-- CORE -->
+			<script src="/projetx/demo/js/core.js" type="text/javascript"></script>
+			<!-- CURRENT INTERFACE JS -->
+			<script src="/projetx/demo/js/profil.js"></script>
+
+		</body>
+	</html>

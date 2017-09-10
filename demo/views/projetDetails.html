@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Details projet</title>
+    <!-- ======================**CSS**===================== -->
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/DataTables/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/DataTables/DataTables-1.10.15/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/ionicons-2.0.1/css/ionicons-2.0.1.min.css" />
+    <!-- CORE -->
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/css/core.css">
+    <!-- CURRENT INTERFACE CSS -->
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/css/projetDetails.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR INCLUDE -->
+    <span id="navInc"></span>
+    <!-- INTERFACE CONTAINER -->
+    <div class="container-fluid">
+        <!-- #CODE HERE -->
+        <div class="card">
+            <div class="card-header card-inverse card-primary text-white">
+                <h3>Détails du projet</h3>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <!-- Panel "infos" de gauche -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="float-left"><strong>Informations projet</strong></h5>
+                                <button class="btn btn-sm btn-primary ion-edit float-right" type="button" onclick="editProject(0)" id="modifyProjectButton"> Modifier le projet</button>
+                            </div>
+                            <div class="card-block">
+                                <p><strong>Nom du projet:</strong> <span id="nom"></span></p>
+                                <p><strong>Identifiant du projet:</strong> <span id="id-unique"></span></p>
+                                <p><strong>Date de début:</strong> <span id="DateD"></span></p>
+                                <p><strong>Date de fin:</strong> <span id="DateF"></span></p>
+                                <p><strong>Chef de projet:</strong> <span id="chefProjet"></span></p>
+                                <p><strong>Coût du projet:</strong> <span id="cost"></span></p>
+                                <p><strong>Description:</strong> <span id="Description"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <!-- Panel "collaborateurs"-->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="float-left"><strong>Collaborateurs</strong></h5>
+                                <button class="btn btn-success btn-xs float-right ion-android-add" data-toggle="modal" data-target="#modalTeamAddWorker" id="ajout_collaborateur"></button>
+                            </div>
+                            <div class="card-block block-amis-coll">
+                                <div class="row d-flex justify-content-around align-items-center team-members">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/balthazar.png">
+                                    <span class="float-left">Jean</span>
+                                    <span>Dupont</span>
+                                    <button class="btn btn-danger btn-xs ion-android-close" data-toggle="modal" data-target="#modalTeamRemoveWorker" id="suppression_collaborateur"></button>
+                                </div>
+                                <div class="row d-flex justify-content-around align-items-center team-members">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/balthazar.png">
+                                    <span class="float-left">Jean</span>
+                                    <span>Dupont</span>
+                                    <button class="btn btn-danger btn-xs ion-android-close" data-toggle="modal" data-target="#modalTeamRemoveWorker" id="suppression_collaborateur"></button>
+                                </div>
+                                <div class="row d-flex justify-content-around align-items-center team-members">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/balthazar.png">
+                                    <span class="float-left">Jean</span>
+                                    <span>Dupont</span>
+                                    <button class="btn btn-danger btn-xs ion-android-close" data-toggle="modal" data-target="#modalTeamRemoveWorker" id="suppression_collaborateur"></button>
+                                </div>
+                            </div>
+                            <!-- Panel "documents" -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="float-left"><strong>Documents liés au projet</strong></h5>
+                                </div>
+                                <div class="card-block block-amis-coll">
+                                    <div class="row d-flex justify-content-around align-items-center team-members">
+                                        <span>Charte graphique</span>
+                                        <button class="btn btn-danger btn-xs ion-android-close" data-toggle="modal" data-target="#modalRemoveProjectFiles" id=""></button>
+                                    </div>
+                                    <div class="row d-flex justify-content-around align-items-center team-members">
+                                        <span>Charte graphique</span>
+                                        <button class="btn btn-danger btn-xs ion-android-close" data-toggle="modal" data-target="#modalRemoveProjectFiles" id=""></button>
+                                    </div>
+                                    <div class="row d-flex justify-content-around align-items-center team-members">
+                                        <span>Charte graphique</span>
+                                        <button class="btn btn-danger btn-xs ion-android-close" data-toggle="modal" data-target="#modalRemoveProjectFiles" id=""></button>
+                                    </div>
+                                    <div class="row d-flex justify-content-around align-items-center team-members">
+                                        <span>Charte graphique</span>
+                                        <button class="btn btn-danger btn-xs ion-android-close" data-toggle="modal" data-target="#modalRemoveProjectFiles" id=""></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-lg-4">
+                        <!-- Panel avancement des tâches en haut à droite de l'écran-->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="float-left"><strong>Avancement global du projet</strong></h5>
+                            </div>
+                            <div id="piechart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-taches">
+            <table class="table table-responsive table-striped" id="table_id">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Date de début</th>
+                        <th>Date de fin</th>
+                        <th>Collaborateurs</th>
+                        <th>Status</th>
+                        <th>Avancement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- MODAL INCLUDE -->
+    <span id="projectModification"></span>
+    <span id="teamAddWorker"></span>
+    <span id="teamRemoveWorker"></span>
+    <span id="removeProjectFiles"></span>
+    <!-- MODAL INCLUDE -->
+    <span id="taskCreation"></span>
+    <!-- FOOTER INCLUDE -->
+    <span id="footerInc"></span>
+    <!-- ======================**JS**===================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/projetx/demo/librairies/jQuery-3.2.1/jQuery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/DataTables/datatables.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/DataTables/DataTables-1.10.15/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/moment.js-2.18.1/moment-with-locales-2.18.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/tether-1.4.0/tether-1.4.0.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- CORE -->
+    <script src="/projetx/demo/js/core.js" type="text/javascript"></script>
+    <!-- CURRENT INTERFACE JS -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/projetx/demo/js/projetDetails.js"></script>
+</body>
+
+</html>

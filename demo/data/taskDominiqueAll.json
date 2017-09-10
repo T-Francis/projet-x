@@ -1,0 +1,88 @@
+{
+    "data": [{
+            "Nom": "Supervision sprint Maquette",
+            "Collaborateurs": [{
+                "age": 38,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Sprintsur la réalisation des maquettes",
+            "status": "en cours",
+            "Projet": "App PokemonGo",
+            "DateD": "2017-08-22",
+            "DateF": "2017-10-30",
+            "completion": 33,
+            "status":"en cours",
+            "priority":"haute",
+            "mTask": false
+        },
+        {
+            "Nom": "Appeler les déménageurs",
+            "Collaborateurs": [{
+                "age": 34,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Appeler les déménageurs et finaliser les détails + dates",
+            "status": "fait",
+            "Projet": "Déménagement",
+            "DateD": "2017-09-10",
+            "DateF": "2017-09-10",
+            "completion": 100,
+            "status":"fait",
+            "priority":"haute",
+            "mTask": false
+        },
+        {
+            "Nom": "Emménager",
+            "Collaborateurs": [{
+                "age": 34,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Emménager",
+            "status": "A faire",
+            "Projet": "Déménagement",
+            "DateD": "2017-10-29",
+            "DateF": "2017-10-30",
+            "completion": 0,
+            "status":"a faire",
+            "priority":"normal",
+            "mTask": false
+        },
+        {
+            "Nom": "Valider les plans Architecte",
+            "Collaborateurs": [{
+                "age": 38,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Valider les plan avant lancement du chantier",
+            "status": "fait",
+            "Projet": "Construction petit immeuble",
+            "DateD": "2017-05-10",
+            "DateF": "2017-05-15",
+            "completion": 100,
+            "status":"fait",
+            "priority":"normal",
+            "mTask": false
+        },
+        {
+            "Nom": "Supervision chantier",
+            "Collaborateurs": [{
+                "age": 38,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Réunion hebdomadaire avec le maitre d'oeuvre",
+            "status": "en cours",
+            "Projet": "Construction petit immeuble",
+            "DateD": "2017-06-01",
+            "DateF": "2017-12-01",
+            "completion": 50,
+            "status":"en cours",
+            "priority":"normal",
+            "mTask": false
+        }
+    ]
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Equipes</title>
+    <!-- ======================**CSS**===================== -->
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/DataTables/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/DataTables/DataTables-1.10.15/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/librairies/ionicons-2.0.1/css/ionicons-2.0.1.min.css" />
+    <!-- CORE -->
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/css/core.css">
+    <!-- CURRENT INTERFACE CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link rel="stylesheet" type="text/css" href="/projetx/demo/css/equipes.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR INCLUDE -->
+    <span id="navInc"></span>
+    <!-- INTERFACE CONTAINER -->
+    <div class="container-fluid">
+        <div class="row">
+            <div id="team-block" class="col-lg-12">
+                <div class="card-header card-inverse card-primary text-white">
+                    <h3 class="headerequipes">EQUIPES</h3>
+                </div>
+                <div class="row">
+                    <div class="card-block col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="float-left width70">1 - Construction petit immeuble (5)</h5>
+                                <button class="btn btn-success btn-xs float-right ion-edit boutton-modif-equipe"> modifier</button>
+                            </div>
+                            <div id="equipe1" class="row rowmargin cadre height1 chiparea">
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/balthazar.png">
+                                    <span class="fontsize1 position">Dominique Mas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-block col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="float-left width70">2 - Deploiement App Open Outings (4)</h5>
+                                <button class="btn btn-success btn-xs float-right ion-edit boutton-modif-equipe"> modifier</button>
+                            </div>
+                            <div id="equipe2" class="row rowmargin cadre height1 chiparea">
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/dominique.png">
+                                    <span class="fontsize1 position">Dominique Mas</span>
+                                </div>
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/franck.png">
+                                    <span class="fontsize1 position">Franck Descombes</span>
+                                </div>
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/yannick.png">
+                                    <span class="fontsize1 position">Lebihan Yannick</span>
+                                </div>
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/ludovic.png">
+                                    <span class="fontsize1 position">Ludovic Castagnedoli</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-block col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="float-left width70">3 - Develloppement App PokemonGo (8)</h5>
+                                <button class="btn btn-success btn-xs float-right ion-edit boutton-modif-equipe"> modifier</button>
+                            </div>
+                            <div id="equipe4" class="row rowmargin cadre height1 chiparea">
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/dominique.png">
+                                    <span class="fontsize1 position">Dominique Mas</span>
+                                </div>
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        							<img class="avatar" src="/projetx/demo/images/avatars/man/gerard.png">
+        							<span class="fontsize1 position">Gerard Aguerre</span>
+        						</div>
+        						<div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        							<img class="avatar" src="/projetx/demo/images/avatars/man/eric.png">
+        							<span class="fontsize1 position">Eric Castel</span>
+        						</div>
+        						<div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        							<img class="avatar" src="/projetx/demo/images/avatars/man/francis.png">
+        							<span class="fontsize1 position">Francis Tessier</span>
+        						</div>
+        						<div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        							<img class="avatar" src="/projetx/demo/images/avatars/man/balthazar.png">
+        							<span class="fontsize1 position">Baltazar Feron</span>
+        						</div>
+        						<div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        							<img class="avatar" src="/projetx/demo/images/avatars/man/fahd.png">
+        							<span class="fontsize1 position">Fahd Jaouad</span>
+        						</div>
+        						<div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        							<img class="avatar" src="/projetx/demo/images/avatars/man/pierre.png">
+        							<span class="fontsize1 position">Pierre Sabat</span>
+        						</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-block col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="float-left width70">4 - Demenagement (3)</h5>
+                                <button class="btn btn-success btn-xs float-right ion-edit boutton-modif-equipe"> modifier</button>
+                            </div>
+                            <div id="equipe3" class="row rowmargin cadre height1 chiparea">
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/man/roger.png">
+                                    <span class="fontsize1 position">Roger Pickett</span>
+                                </div>
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/woman/betty.png">
+                                    <span class="fontsize1 position">Betty Curtis</span>
+                                </div>
+                                <div class="member-card col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                    <img class="avatar" src="/projetx/demo/images/avatars/woman/florine.png">
+                                    <span class="fontsize1 position">Florine Osborne</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ajouter" style="display: none;" class="card col-lg-2">
+                <div class="card-block">
+                    <div class="card-header card-inverse card-info text-white">
+                        <h3 class="">Ajouter</h3>
+                    </div>
+                    <div class="row">
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/fahd.png">
+                            <span class="fontsize1 position">Fahd Jaouad</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/gerard.png">
+                            <span class="fontsize1 position">Gerard Aguerre</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/dominique.png">
+                            <span class="fontsize1 position">Dominique Mas</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/eric.png">
+                            <span class="fontsize1 position">Eric Castel</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/francis.png">
+                            <span class="fontsize1 position">Francis Tessier</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/balthazar.png">
+                            <span class="fontsize1 position">Baltazar Feron</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/franck.png">
+                            <span class="fontsize1 position">Franck Descombes</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/yannick.png">
+                            <span class="fontsize1 position">Lebihan Yannick</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/ludovic.png">
+                            <span class="fontsize1 position">Castagnedoli Ludovic</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/roger.png">
+                            <span class="fontsize1 position">Roger Picket</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/man/pierre.png">
+                            <span class="fontsize1 position">Pierre Sabat</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/woman/betty.png">
+                            <span class="fontsize1 position">Betty Curtis</span>
+                        </div>
+                        <div class="member-card member-card-list col-12">
+                            <img class="avatar-liste" src="/projetx/demo/images/avatars/woman/florine.png">
+                            <span class="fontsize1 position">Florine Osborne</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL INCLUDE -->
+    <span id="ghost"></span>
+    <span id="doublonAlert"></span>
+
+    <!-- FOOTER INCLUDE -->
+    <span id="footerInc"></span>
+
+    <!-- ======================**JS**===================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/projetx/demo/librairies/jQuery-3.2.1/jQuery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/DataTables/datatables.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/DataTables/DataTables-1.10.15/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/moment.js-2.18.1/moment-with-locales-2.18.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/tether-1.4.0/tether-1.4.0.min.js" type="text/javascript"></script>
+    <script src="/projetx/demo/librairies/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- CORE -->
+    <script src="/projetx/demo/js/core.js" type="text/javascript"></script>
+    <!-- CURRENT INTERFACE JS -->
+    <script src="/projetx/demo/js/equipes.js"></script>
+</body>
+
+</html>

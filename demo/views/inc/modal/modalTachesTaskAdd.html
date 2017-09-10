@@ -1,0 +1,77 @@
+<!-- Modal ajouter tache -->
+<div class="modal fade" id="modalNewTache">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header text-white" style="background-color: #007bff">
+				<h5 class="modal-title" id="titreAjTache">Ajouter une tache</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true" id="closeCross">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group row">
+						<label for="nomTache" class="form-control-label sr-only">Nom de la tache</label>
+						<input type="text" placeholder="Nom de la tache" class="form-control col-md-11" id="nomTache">
+					</div>
+					<div class="form-group row">
+						<label for="descTache" class="form-control-label sr-only">Description de la tache</label>
+						<textarea class="form-control col-md-11" placeholder="Description de la tache" id="descTache" rows="4" ></textarea>
+					</div>
+					<div class="form-group row">
+						<label for="lierProjet" class="form-control-label sr-only"></label>
+						<select class="form-control col-md-11" id="lierProjet">
+							<option value="" selected disabled>Choisir un projet à lier</option>
+							<option>Anniversaire ABC</option>
+							<option>Application web	</option>
+							<option>Construction</option>
+						</select>
+					</div>
+					<div class="form-group row">
+						<label for="niveauUrgence" class="form-control-label sr-only"></label>
+						<select class="form-control col-md-11" id="niveauUrgence">
+							<option value="" selected disabled>Choisir un niveau de priorité</option>
+							<option>Eleve</option>
+							<option>Moyen</option>
+							<option>Bas</option>
+						</select>
+					</div>
+					<div class="form-group row" id="hideInput">
+						<label for="pourcentageAv" class="form-control-label sr-only"></label>
+						<input type="number" placeholder="Pourcentage d'avancement" class="form-control col-md-11" id="pourcentageAv" min="0" max="100"/>
+					</div>
+					<div class="form-group row">
+						<label for="dateD" class="form-control-label"></label>
+						<div class="date">
+							<div class="input-group input-append date datePicker">
+								<input type="text" placeholder="Date de début" class="form-control col-md-12" name="date" id="dateD"/>
+								<span class="input-group-addon add-on ion-calendar"></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="dateF" class="form-control-label"></label>
+						<div class="date">
+							<div class="input-group input-append date datePicker">
+								<input type="text" placeholder="Date de fin" class="form-control col-md-12" name="date" id="dateF"/>
+								<span class="input-group-addon add-on ion-calendar"></span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="collaborateurs" class="form-control-label sr-only">Collaborateurs</label>
+						<input type="text" placeholder="Collaborateurs" class="form-control col-md-11" id="collaborateurs">
+					</div>
+					<div class="form-group row" id="listCol"></div>
+
+					<div class="modal-footer col-md-12">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset">Fermer</button>
+						<button type="reset" class="btn btn-danger" id="ajReset">Reset</button>
+						<button type="button" class="btn btn-success">Envoyer</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,198 @@
+{
+    "data": [{
+            "nom": "Mas",
+            "prenom": "Dominique",
+            "identifiant": "Dominique",
+            "mail": "mas.dominique@afpa-lab.com",
+            "ownedProject": [{
+                    "idInData": 0,
+                    "name": "Dev App PokemonGo"
+                },
+                {
+                    "idInData": 1,
+                    "name": "Construction petit immeuble"
+                },
+                {
+                    "idInData": 2,
+                    "name": "Déménagement"
+                },
+                {
+                    "idInData": 3,
+                    "name": "Déploiement-projet-OO"
+                }
+            ],
+            "teamProject": false,
+            "avatar": "/projetx/demo/images/avatars/man/dominique.png",
+            "age": 38,
+            "sexe": "M"
+        },
+        {
+            "nom": "Aguerre",
+            "prenom": "Gerard",
+            "identifiant": "Gerard",
+            "mail": "Aguerre.Gerard@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 0,
+                "name": "Dev App PokemonGo"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/gerard.png",
+            "age": 55,
+            "sexe": "M"
+        },
+        {
+            "nom": "Sabat",
+            "prenom": "Pierre",
+            "identifiant": "Pierre",
+            "mail": "Sabat.Pierre@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 0,
+                "name": "Dev App PokemonGo"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/pierre.png",
+            "age": 38,
+            "sexe": "M"
+        },
+        {
+            "nom": "Castel",
+            "prenom": "Eric",
+            "identifiant": "Eric",
+            "mail": "Castel.Eric@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 0,
+                "name": "Dev App PokemonGo"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/eric.png",
+            "age": 38,
+            "sexe": "M"
+        },
+        {
+            "nom": "Tessier",
+            "prenom": "Francis",
+            "identifiant": "Francis",
+            "mail": "tessier.francis@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 0,
+                "name": "Dev App PokemonGo"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/francis.png",
+            "age": 34,
+            "sexe": "M"
+        },
+        {
+            "nom": "Feron",
+            "prenom": "Balthazar",
+            "identifiant": "Balthazar",
+            "mail": "feron.balthazar@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 0,
+                "name": "Dev App PokemonGo"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/balthazar.png",
+            "age": 24,
+            "sexe": "M"
+        },
+        {
+            "nom": "Jaouad",
+            "prenom": "Fahd",
+            "identifiant": "Fahd",
+            "mail": "Jaouad.Fahd@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 0,
+                "name": "Dev App PokemonGo"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/fahd.png",
+            "age": 24,
+            "sexe": "M"
+        },
+        {
+            "nom": "Pickett",
+            "prenom": "Roger",
+            "identifiant": "Roger",
+            "mail": "rogers.pickett@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 1,
+                "name": "Déménagement"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/roger.png",
+            "age": 44,
+            "sexe": "M"
+        },
+        {
+            "nom": "Curtis",
+            "prenom": "Betty",
+            "identifiant": "Betty",
+            "mail": "betty.curtis@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 1,
+                "name": "Déménagement"
+            }],
+            "avatar": "/projetx/demo/images/avatars/woman/betty.png",
+            "age": 22,
+            "sexe": "W"
+        },
+        {
+            "nom": "Osborne",
+            "prenom": "Florine",
+            "identifiant": "Florine",
+            "mail": "florine.osborne@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 1,
+                "name": "Déménagement"
+            }],
+            "avatar": "/projetx/demo/images/avatars/woman/florine.png",
+            "age": 28,
+            "sexe": "W"
+        },
+        {
+            "nom": "Castagnedoli",
+            "prenom": "Ludovic",
+            "identifiant": "Ludovic",
+            "mail": "castagnedoli.ludovic@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 3,
+                "name": "Déploiement projet OO"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/ludovic.png",
+            "age": 40,
+            "sexe": "M"
+        },
+        {
+            "nom": "Lebihan",
+            "prenom": "Yannick",
+            "identifiant": "Yannick",
+            "mail": "lebihan.yannick@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 3,
+                "name": "Déploiement projet OO"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/yannick.png",
+            "age": 38,
+            "sexe": "M"
+        },
+        {
+            "nom": "Descombes",
+            "prenom": "Franck",
+            "identifiant": "Franck",
+            "mail": "franck.descombes@afpa-lab.com",
+            "ownedProject": false,
+            "teamProject": [{
+                "idInData": 3,
+                "name": "Déploiement projet OO"
+            }],
+            "avatar": "/projetx/demo/images/avatars/man/franck.png",
+            "age": 38,
+            "sexe": "M"
+        }
+    ]
+}

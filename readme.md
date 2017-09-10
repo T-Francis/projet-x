@@ -6,6 +6,12 @@ Based on Java EE, this project is developed during a Java designer training cour
 
 ***
 
+The static-demo branch is a version of a pseudo live user experience
+data are generated from json files and all includes part are made with javaScript/jQuery
+since there is no server logic that serve those html page, all includes are made with javaScript and you can experience a huge loading time while navigate.
+
+***
+
 Developpers Team :
 + Francis.T
 + Gerard.A

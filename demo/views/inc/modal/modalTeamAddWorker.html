@@ -1,0 +1,34 @@
+<!-- Modale ajout de collaborateur-->
+<div class="modal fade" id="modalTeamAddWorker">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-white" style="background-color: #007bff">
+                <h5 class="modal-title">Ajout de collaborateurs</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" id="closeCross">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="traitement.php">
+                        <p>
+                            <label for="nom">Quel collaborateur voulez-vous ajouter?</label><br />
+                            <select name="nom" id="nom">
+                                <option value="Dupont">Dupont</option>
+                                <option value="Tessier">Tessier</option>
+                                <option value="Castel">Castel</option>
+                                <option value="Aguerre">Aguerre</option>
+                                <option value="Ferron">Ferron</option>
+                                <option value="Sabat">Sabat</option>
+                                <option value="Dupont">Dupont</option>
+                                <option value="Dupont">Dupont</option>
+                            </select>
+                        </p>
+                    <div class="modal-footer col-md-12">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset">Fermer</button>
+                        <button type="button" class="btn btn-success">Ajouter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

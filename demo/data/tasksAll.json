@@ -1,0 +1,228 @@
+{
+    "data": [{
+            "Nom": "Supervision sprint Maquette",
+            "Collaborateurs": [{
+                "age": 38,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Sprint Maquette",
+            "status": "en cours",
+            "Projet": "Dev App PokemonGo",
+            "projectId":0,
+            "DateD": "2017-08-22",
+            "DateF": "2017-10-30",
+            "completion": 33,
+            "mTask": false
+        },
+        {
+            "Nom": "Maquettage des scenes de combat",
+            "Collaborateurs": [{
+                    "age": 34,
+                    "name": "Tessier Francis",
+                    "email": "tessier.francis@afpa-lab.com"
+                },
+                {
+                    "age": 24,
+                    "name": "Feron Balthazar",
+                    "email": "feron.balthazar@afpa-lab.com"
+                },
+                {
+                    "age": 24,
+                    "name": "Jaouad Fahd",
+                    "email": "Jaouad.Fahd@afpa-lab.com"
+                }
+            ],
+            "Description": "Maquettage des scenes de combat",
+            "status": "en cours",
+            "Projet": "Dev App PokemonGo",
+            "projectId":0,
+            "DateD": "2017-08-22",
+            "DateF": "2017-10-15",
+            "completion": 75,
+            "mTask": "Sprint Maquette"
+        },
+        {
+            "Nom": "Maquettage des Personnage",
+            "Collaborateurs": [{
+                    "age": 55,
+                    "name": "Aguerre Gerard",
+                    "email": "Aguerre.Gerard@afpa-lab.com"
+                },
+                {
+                    "age": 38,
+                    "name": "Sabat Pierre",
+                    "email": "Sabat.Pierre@afpa-lab.com"
+                },
+                {
+                    "age": 38,
+                    "name": "Castel Eric",
+                    "email": "Castel.Eric@afpa-lab.com"
+                }
+            ],
+            "Description": "Maquettage des personnages",
+            "status": "en cours",
+            "Projet": "Dev App PokemonGo",
+            "projectId":0,
+            "DateD": "2017-08-22",
+            "DateF": "2017-10-15",
+            "completion": 75,
+            "mTask": "Sprint Maquette"
+        },
+        {
+            "Nom": "Validation et assemblage",
+            "Collaborateurs": [{
+                    "age": 55,
+                    "name": "Aguerre Gerard",
+                    "email": "Aguerre.Gerard@afpa-lab.com"
+                },
+                {
+                    "age": 38,
+                    "name": "Sabat Pierre",
+                    "email": "Sabat.Pierre@afpa-lab.com"
+                },
+                {
+                    "age": 38,
+                    "name": "Castel Eric",
+                    "email": "Castel.Eric@afpa-lab.com"
+                },
+                {
+                    "age": 34,
+                    "name": "Tessier Francis",
+                    "email": "tessier.francis@afpa-lab.com"
+                },
+                {
+                    "age": 24,
+                    "name": "Feron Balthazar",
+                    "email": "feron.balthazar@afpa-lab.com"
+                },
+                {
+                    "age": 24,
+                    "name": "Jaouad Fahd",
+                    "email": "Jaouad.Fahd@afpa-lab.com"
+                }
+            ],
+            "Description": "Révision client et assemblage",
+            "status": "a faire",
+            "Projet": "Dev App PokemonGo",
+            "projectId":0,
+            "DateD": "2017-10-15",
+            "DateF": "2017-10-30",
+            "completion": 0,
+            "mTask": "Sprint Maquette"
+        },
+        {
+            "Nom": "Cartons sdb & ch1",
+            "Collaborateurs": [{
+                    "age": 46,
+                    "name": "Betty Curtis",
+                    "email": "betty.curtis@afpa-lab.com"
+                },
+                {
+                    "age": 20,
+                    "name": "Florine Osborne",
+                    "email": "florine.osborne@afpa-lab.com"
+                }
+            ],
+            "Description": "Préparer les cartons de la salle de bain et de la chambre",
+            "status": "a faire",
+            "Projet": "Déménagement",
+            "projectId":1,
+            "DateD": "2017-10-23",
+            "DateF": "2017-10-23",
+            "completion": 0,
+            "mTask": false
+        },
+        {
+            "Nom": "Cartons salon & sous-sol",
+            "Collaborateurs": [{
+                    "age": 42,
+                    "name": "Rogers Pickett",
+                    "email": "rogers.pickett@afpa-lab.com"
+                },
+                {
+                    "age": 46,
+                    "name": "Betty Curtis",
+                    "email": "betty.curtis@afpa-lab.com"
+                },
+                {
+                    "age": 20,
+                    "name": "Florine Osborne",
+                    "email": "florine.osborne@afpa-lab.com"
+                }
+            ],
+            "Description": "Préparer les cartons du salon et du sous sol",
+            "status": "a faire",
+            "Projet": "Déménagement",
+            "projectId":1,
+            "DateD": "2017-10-24",
+            "DateF": "2017-10-27",
+            "completion": 0,
+            "mTask": false
+        },
+        {
+            "Nom": "Appeler les déménageurs",
+            "Collaborateurs": [{
+                "age": 34,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Appeler les déménageurs et finaliser les détails + dates",
+            "status": "fait",
+            "Projet": "Déménagement",
+            "projectId":1,
+            "DateD": "2017-09-10",
+            "DateF": "2017-09-10",
+            "completion": 100,
+            "mTask": false
+        },
+        {
+            "Nom": "Emménager",
+            "Collaborateurs": [{
+                "age": 34,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Emménager",
+            "status": "a faire",
+            "Projet": "Déménagement",
+            "projectId":1,
+            "DateD": "2017-10-29",
+            "DateF": "2017-10-30",
+            "completion": 0,
+            "mTask": false
+        },
+        {
+            "Nom": "Valider les plans Architecte",
+            "Collaborateurs": [{
+                "age": 38,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "valider les plan avant lancement du chantier",
+            "status": "fait",
+            "Projet": "Construction petit immeuble",
+            "projectId":2,
+            "DateD": "2017-05-10",
+            "DateF": "2017-05-15",
+            "completion": 100,
+            "mTask": false
+        },
+        {
+            "Nom": "Supervision chantier",
+            "Collaborateurs": [{
+                "age": 38,
+                "name": "Mas Dominique",
+                "email": "mas.dominique@afpa-lab.com"
+            }],
+            "Description": "Réunion hebdomadaire avec le maitre d'oeuvre",
+            "status": "en cours",
+            "Projet": "Construction petit immeuble",
+            "projectId":2,
+            "DateD": "2017-06-01",
+            "DateF": "2017-12-01",
+            "completion": 50,
+            "mTask": false
+        }
+    ]
+}
