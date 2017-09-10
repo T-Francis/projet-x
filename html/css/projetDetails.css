@@ -1,0 +1,30 @@
+html {
+    position: relative;
+    height: 100%;
+}
+
+#table_id {
+	margin: auto;
+
+}
+
+.block-taches {
+
+
+}
+
+.block-amis-coll {
+
+    height:133px;
+    overflow: scroll;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}

@@ -1,0 +1,114 @@
+<nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-faded nav-pills">
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a class="navbar-brand" href="/projetx/brut/index.html"><img src="/projetx/brut/images/logo1.png"></a>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav mr-auto align-items-center left-nav">
+			<!-- Lien de test -->
+			<!-- <li class="nav-item"><a class="nav-link" href="/projetx/brut/views/template.model.html">Template page</a></li> -->
+			<!-- Tableau de bord -->
+			<li class="nav-item">
+				<a class="nav-link" href="/projetx/brut/views/tableauDeBord.html">Tableau de bord</a>
+			</li>
+			<!-- Projet -->
+			<li class="nav-item">
+				<a class="nav-link" href="/projetx/brut/views/projets.html">Projets</a>
+			</li>
+			<!-- Tâches -->
+			<li class="nav-item">
+				<a class="nav-link" href="/projetx/brut/views/taches.html">Tâches</a>
+			</li>
+			<!-- Equipes -->
+			<li class="nav-item">
+				<a class="nav-link" href="/projetx/brut/views/equipes.html">Equipes</a>
+			</li>
+			<!-- Documents -->
+			<li class="nav-item">
+				<a class="nav-link" href="/projetx/brut/views/documentsProjets.html">Documents</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto align-items-center">
+			<!-- Alert -->
+			<li class="nav-item">
+				<a id="alertBell" class="nav-link" onclick="showAlert()" ><span class="badge badge-pill badge-danger">2</span>&nbsp;<i class="ion-ios-bell-outline em-2" aria-hidden="true"></i></a>
+			</li>
+			<!-- Mail alert -->
+			<li class="nav-item">
+				<a class="nav-link" href="/projetx/brut/views/messagerie.html"><span class="badge badge-pill badge-warning">5</span>&nbsp;<i class="ion-ios-email-outline em-2" aria-hidden="true"></i></a>
+			</li>
+			<!-- Profil -->
+			<li class="nav-item">
+				<div class="chip"><a class="chipLink" href="/projetx/brut/views/profil.html"><img src="/projetx/brut/images/avatars/man/dominique.png" alt="Person" width="50" height="50"> Dominique Mas </a></div>
+				<!-- <a class="nav-link" ">Profil</a> -->
+			</li>
+			<!-- Log out -->
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="ion-log-out em-2" aria-hidden="true"></i></a>
+			</li>
+			<!-- DROPDOWN EXAMPLE -->
+			<!-- <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+			<div class="dropdown-menu" aria-labelledby="dropdown01">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+			</li> *fin DROPDOWN -->
+		</ul>
+	</div>
+</nav>
+
+<!-- Modal annonces projets honteusement cacher avec la nav pour rester global-->
+<div class="modal modal-center fade " id="modalAnnoncesProjets" tabindex="-1" role="dialog" aria-labelledby="modalAnnoncesProjets" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-header modalAnnonces-header">
+			<i class="ion-android-close text-white offset-11" data-dismiss="modal"></i>
+		</div>
+		<div id="alert-box">
+			<div class="alert alert-danger alert-dismissable">
+				<a href="#" class="close" data-dismiss="alert" onclick="removeAlert()" aria-label="close">×</a>
+				<strong>pokemonGo</strong> La date de livraison de la maquette est avancé au 28/03/15
+			</div>
+			<div class="alert alert-info alert-dismissable">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+				<strong>Démenagenemt</strong> félicitations a l'équipe ! tout les cartons sont emballés
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('#modalAnnoncesProjets').on('hidden.bs.modal', function () {
+			var alertLeft=0;
+			$('#alert-box').children('.alert').each(function(){
+				alertLeft++;
+			})
+			$("#alertBell").children('span').text(alertLeft);
+			if ($("#alertBell").children('span').text() == "0") {
+				$("#alertBell").children('span').hide();
+			}
+		})
+
+        $(function(){
+            var current = location.pathname;
+            // console.log(current);
+            $('.left-nav .nav-link').each(function() {
+                var $this = $(this);
+                // console.log($this);
+                // if the current path is like this link, make it active
+                if ($this.attr('href').indexOf(current) !== -1) {
+                    $this.addClass('active text-white');
+                }
+            })
+		})
+	 });
+	 function removeAlert(){
+		 $(this).closest('alert').remove();
+		 if (true) {
+
+		 }
+	 }
+</script>

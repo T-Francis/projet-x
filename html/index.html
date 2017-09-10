@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<title>Projet X</title>
+		<!-- ======================**CSS**===================== -->
+		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/jquery-ui-1.12.1/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/DataTables/datatables.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/DataTables/DataTables-1.10.15/css/dataTables.bootstrap4.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/ionicons-2.0.1/css/ionicons-2.0.1.min.css"/>
+		<!-- CORE -->
+		<link rel="stylesheet" type="text/css" href="/projetx/brut/css/core.css">
+		<!-- CURRENT INTERFACE CSS -->
+		<link rel="stylesheet" type="text/css" href="/projetx/brut/css/landing.css">
+	</head>
+	<body>
+
+		<!-- NAVBAR INCLUDE -->
+		<nav class="navbar navbar-toggleable-md navbar-light fixed-top bg-faded">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="/projetx/brut/index.html"><img src="/projetx/brut/images/logo1.png"></a>
+		</nav>
+
+
+		<!-- INTERFACE CONTAINER -->
+		<div class="container-fluid">
+
+			<!-- INTRO JUMBO -->
+			<div class="container text-center jumbotron" style="background: rgba(249,249,249, 0.5);" id="jumboD">
+				<h1 class="jumbotron-heading">Projet-X</h1>
+				<h3 class="jumbotron-heading">Un gestionnaire de projet adaptable a tout types de projet.</h3>
+				<p class="lead text-muted"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae cum deserunt ea eos et explicabo fuga id in ipsa iste, mollitia perferendis rerum saepe sed tenetur vel. Accusamus, quam.</p>
+			</div>
+
+			<!-- LOG/SIGN BUTTON -->
+			<div class="container text-center">
+				<button type="button" class="btn btn-primary connexionB">Connexion</button>
+				<button type="button" class="btn btn-primary inscriptionB">Inscription</button>
+			</div>
+
+			<!-- MODAL CONNEXION -->
+			<div class="container-fluid col-6 col-lg-6 cols-xs-6 col-sm-6 offset-3 inscription" id="connexionForm" style="display:none;">
+				<div class="card ">
+					<h3 class="card-header card-primary">Login :</h3>
+					<form id="user" action="/projetx/brut/views/tableauDeBord.html" method="POST">
+						<div class="card-block">
+							<div class="form-group">
+								<input id="pseudo" name="pseudo" placeholder="Pseudo" type="text" class="form-control" value="Dominique" />
+							</div>
+							<div class="form-group">
+								<input id="password" name="password" placeholder="Mot de Passe" type="password" class="form-control" value="123456789" />
+							</div>
+							<button class="btn btn-primary pull-left reset" type="button">Identifiants Oubliés</button>
+							<!-- <button class="btn btn-primary pull-left inscriptionB" type="button">Inscription</button> -->
+							<button class="btn btn-success  float-right connexionB">Connexion</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- MODAL REGISTER -->
+			<div class="container-fluid col-6 col-lg-6 cols-xs-6 col-sm-6 offset-3 inscription" id="inscriptionForm" style="display:none;">
+				<div class="card ">
+					<h3 class="card-header card-primary">Inscription :</h3>
+					<form id="user" action="/projetx/brut/views/tableauDeBord.html" method="POST">
+						<div class="card-block">
+							<div class="form-group ">
+								<input id="fName" name="fName" placeholder="Prenom" type="text" class="form-control" value="" />
+							</div>
+							<div class="form-group">
+								<input id="lName" name="lName" placeholder="Nom" type="text" class="form-control" value="" />
+							</div>
+							<div class="form-group">
+								<input id="pseudo" name="pseudo" placeholder="Pseudo" type="text" class="form-control" value="" />
+							</div>
+							<div class="form-group">
+								<input id="email" name="email" placeholder="E-mail" type="text" class="form-control" value="" />
+							</div>
+
+							<div class="form-group">
+								<input id="password" name="password" placeholder="Mot de Passe" type="password" class="form-control" value="" />
+							</div>
+							<div class="form-group">
+								<input id="password2" name="password2" placeholder="Confirmer" type="password" class="form-control" value="" />
+							</div>
+							<button class="btn btn-success  float-right inscriptionB" type="submit">Inscription</button>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- MODAL FORGOTTEN ID -->
+			<div class="container-fluid col-6 col-lg-6 cols-xs-6 col-sm-6 offset-3 inscription" id="resetP" style="display:none;">
+				<div class="card ">
+					<h3 class="card-header card-primary">Identifiants Oubliés :</h3>
+					<form id="command" action="/projetx/brut/views/tableauDeBord.html" method="POST">
+						<fieldset class="card-block">
+							<fieldset class="form-group">
+								<legend>Email ou pseudo</legend>
+								<div class="form-check">
+									<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1">
+									Pseudo
+								</label>
+								</div>
+								<div class="form-check">
+									<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+									Mot de Passe
+								</label>
+								</div>
+							</fieldset>
+							<div class="form-group">
+								<input type="text" id="resetField" placeholder="E-mail" class="form-control">
+							</div>
+							<button class="btn btn-success  float-right" type="submit">Envoyer</button>
+					</form>
+				</div>
+			</div>
+
+		<!-- FOOTER INCLUDE -->
+		<span id="footerInc"></span>
+
+		<div class="modal fade" id="browserAlert">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title">Compatibilité navigateur</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <p>Nous avons remarqués que vous utiliser Internet Explorer ou Microsoft Edge</p>
+		        <p>Nous souhaitons vous avertir que ces deux navigateurs ne sont pas optimisés pour l'utilisation de notre application (et d'Internet en général) </p>
+		      </div>
+		      <div class="modal-footer">
+		        <a href="https://www.mozilla.org/firefox/new/#download-fx" class="btn btn-primary">Telecharger un vrai navigateur</a>
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- ======================**JS**===================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/projetx/brut/librairies/jQuery-3.2.1/jQuery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="/projetx/brut/librairies/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="/projetx/brut/librairies/DataTables/datatables.min.js" type="text/javascript"></script>
+		<script src="/projetx/brut/librairies/DataTables/DataTables-1.10.15/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+		<script src="/projetx/brut/librairies/moment.js-2.18.1/moment-with-locales-2.18.min.js" type="text/javascript"></script>
+		<script src="/projetx/brut/librairies/tether-1.4.0/tether-1.4.0.min.js" type="text/javascript"></script>
+		<script src="/projetx/brut/librairies/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+		<!-- CORE -->
+		<!-- <script src="/projetx/brut/js/core.js" type="text/javascript"></script> -->
+		<!-- CURRENT INTERFACE JS -->
+		<script src="/projetx/brut/js/landing.js"></script>
+	</body>
+</html>

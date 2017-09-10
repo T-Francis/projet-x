@@ -6,6 +6,10 @@ Based on Java EE, this project is developed during a Java designer training cour
 
 ***
 
+The static-html branch regroup all the html implementation of the projet-X mockups
+
+***
+
 Developpers Team :
 + Francis.T
 + Gerard.A

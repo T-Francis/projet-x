@@ -1,0 +1,162 @@
+
+.table td, th {
+   text-align: center;
+}
+
+
+tbody {
+    display:block;
+    overflow:auto;
+}
+
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+thead {
+    width: calc( 100% - 1em )
+}
+
+.logo {
+	width: 10%;
+}
+
+.projet {
+	width: 30%;
+}
+
+.projet2 {
+	width: 17.5%;
+}
+
+.projet3 {
+	width: 12%;
+}
+
+.tache {
+	width: 20%;
+}
+
+.datedebut {
+	width: 17%;
+}
+
+.datefin {
+	width: 15%;
+}
+
+.etatavancement {
+	width: 20%;
+}
+
+.etatavancementpourcentage {
+	width: 25%;
+	color:red;
+	font-size: 11px;
+}
+
+.barre{
+	width: 20%;
+	font-size:11px;
+}
+
+.barreprogress {
+  border-width:2px;
+}
+
+.cardgauche {
+	max-height: 70%;
+}
+
+.footer2 {
+	height: 100%;
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+
+
+.cartehauteur {
+    /*commenter car conflit lors de l'intégration*/
+	/*position:absolute;
+	height: 100%;
+    margin-top: 90px;
+	padding-top:118px;
+	bottom:62px;*/
+	overflow:hidden;
+}
+
+.cadre{
+	overflow:auto;
+}
+
+.cadre2{
+	height:100%;
+}
+
+.cadre3{
+	max-height:70%;
+}
+
+.cadre4{
+	overflow:auto;
+	height:30%;
+}
+.cadre5{
+	position:fixed;
+}
+
+.cadregauchebas{
+	width:33%;
+	padding-left:15px;
+	margin-top:20px;
+}
+
+.cadremilieubas{
+	width:33%;
+	padding-left:15px;
+	margin-top:20px;
+}
+
+.cadredroitebas{
+	width:33%;
+	padding-left:15px;
+	margin-top:20px;
+}
+
+.fontred {
+	color:red;
+}
+
+.iconemessage{
+	width:15%;
+}
+
+.nommessage{
+	width:20%;
+}
+
+.logoalerte{
+	width:15%;
+}
+
+.alerte{
+	width:85%;
+	color:red;
+}
+
+.height {
+	height:460px;
+}
+
+.cadrebas{
+	height:270px;
+}
+.headerprojets{
+	display:relative;
+}

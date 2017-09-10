@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mes taches</title>
+	<meta charset="utf-8">
+	<!-- ======================**CSS**===================== -->
+	<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/jquery-ui-1.12.1/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/DataTables/datatables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/DataTables/DataTables-1.10.15/css/dataTables.bootstrap4.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/datepicker/css/bootstrap-datepicker3.min.css" />
+	<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/ionicons-2.0.1/css/ionicons-2.0.1.min.css"/>
+	<!-- CORE -->
+	<link rel="stylesheet" type="text/css" href="/projetx/brut/css/core.css">
+</head>
+<body>
+	<!-- NAV INCLUDE -->
+	<span id="navInc"></span>
+
+	<div class="card">
+	<h4 class="card-header bg-primary text-white">Mes taches
+	<button type="button" class="btn btn-success btn-sm float-right" data-toggle="modal" data-target="#modalNewTache">
+		<i class="fa fa-plus" aria-hidden="true"></i>
+		<b> Ajouter une tache</b>
+	</button>
+		</h4>
+		<div class="card-block">
+			<table class="table table-hover" id="tableTaches">
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th>Projet lié</th>
+						<th>Date début</th>
+						<th>Date fin</th>
+						<th>Niveau de priorité</th>
+						<th>Avancement</th>
+						<th>Collaborateur(s)</th>
+						<th>Interaction</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- Modal ajouter tache -->
+	<div class="modal fade" id="modalNewTache">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-white" style="background-color: #007bff">
+					<h5 class="modal-title" id="titreAjTache">Ajouter une tache</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" id="closeCross">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group row">
+							<label for="nomTache" class="form-control-label sr-only">Nom de la tache</label>
+							<input type="text" placeholder="Nom de la tache" class="form-control col-md-11" id="nomTache">
+						</div>
+						<div class="form-group row">
+						    <label for="descTache" class="form-control-label sr-only">Description de la tache</label>
+						    <textarea class="form-control col-md-11" placeholder="Description de la tache" id="descTache" rows="4" ></textarea>
+						</div>
+						<div class="form-group row">
+							<label for="lierProjet" class="form-control-label sr-only"></label>
+							<select class="form-control col-md-11" id="lierProjet">
+								<option value="" selected disabled>Choisir un projet à lier</option>
+							  	<option>Anniversaire ABC</option>
+							  	<option>Application web	</option>
+							  	<option>Construction</option>
+							</select>
+						</div>
+						<div class="form-group row">
+							<label for="niveauUrgence" class="form-control-label sr-only"></label>
+							<select class="form-control col-md-11" id="niveauUrgence">
+								<option value="" selected disabled>Choisir un niveau de priorité</option>
+							  	<option>Eleve</option>
+							  	<option>Moyen</option>
+							  	<option>Bas</option>
+							</select>
+						</div>
+						<div class="form-group row" id="hideInput">
+							<label for="pourcentageAv" class="form-control-label sr-only"></label>
+							<input type="number" placeholder="Pourcentage d'avancement" class="form-control col-md-11" id="pourcentageAv" min="0" max="100"/>
+						</div>
+						<div class="form-group row">
+					        <label for="dateD" class="form-control-label"></label>
+					        <div class="date">
+					            <div class="input-group input-append date datePicker">
+					                <input type="text" placeholder="Date de début" class="form-control col-md-12" name="date" id="dateD"/>
+					                <span class="input-group-addon add-on"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+					            </div>
+					        </div>
+					    </div>
+
+						<div class="form-group row">
+					        <label for="dateF" class="form-control-label"></label>
+					        <div class="date">
+					            <div class="input-group input-append date datePicker">
+					                <input type="text" placeholder="Date de fin" class="form-control col-md-12" name="date" id="dateF"/>
+					                <span class="input-group-addon add-on"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="form-group row">
+							<label for="collaborateurs" class="form-control-label sr-only">Collaborateurs</label>
+							<input type="text" placeholder="Collaborateurs" class="form-control col-md-11" id="collaborateurs">
+						</div>
+						<div class="form-group row" id="listCol"></div>
+
+						<div class="modal-footer col-md-12">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset">Fermer</button>
+							<button type="reset" class="btn btn-danger" id="ajReset">Reset</button>
+							<button type="button" class="btn btn-success">Envoyer</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal afficher tache-->
+	<div class="modal fade" id="modalDisplayTache">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-white" style="background-color: #007bff">
+					<h5 class="modal-title" id="infoTache"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group row">
+							<label for="affNomTache" class="form-control-label col-md-3"><b>Nom tache</b></label>
+							<span class="col-md-9" id="affNomTache"></span>
+						</div>
+						<div class="form-group row">
+							<label for="affDescTache" class="form-control-label col-md-3"><b>Description tache</b></label>
+							<span class="col-md-9" id="affDescTache"></span>
+						</div>
+						<div class="form-group row">
+							<label for="projetLie" class="form-control-label col-md-3"><b>Projet lié</b></label>
+							<span class="col-md-9" id="projetLie"></span>
+						</div>
+						<div class="form-group row">
+							<label for="dateDtache" class="form-control-label col-md-3" ><b>Date de début</b></label>
+							<span class="col-md-9" id="dateDtache"></span>
+						</div>
+						<div class="form-group row">
+							<label for="dateFtache" class="form-control-label col-md-3" ><b>Date de fin</b></label>
+							<span class="col-md-9" id="dateFtache"></span>
+						</div>
+						<div class="form-group row">
+							<label for="affPrio" class="form-control-label col-md-3" ><b>Niveau priorité</b></label>
+							<span class="col-md-9" id="affPrio"></span>
+						</div>
+						<div class="form-group row">
+							<label for="affAv" class="form-control-label col-md-3" ><b>Avancement</b></label>
+							<span class="col-md-9" id="affAv"></span>
+						</div>
+						<div class="form-group row">
+							<label for="affColls" class="form-control-label col-md-3" ><b>Collaborateurs</b></label>
+							<span class="col-md-9" id="affColls"></span>
+						</div>
+
+						<div class="modal-footer col-md-12">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+							<button type="button" class="btn btn-info" id="editerTache">Editer</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- Modal ajouter collaborateur -->
+	<div class="modal fade" id="modalAjCol">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-white" style="background-color: #007bff">
+					<h5 class="modal-title" id="titreAjCol">Ajouter une tache</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" id="closeCross">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+					    <div class="form-group row">
+							<label for="collaborateurs" class="form-control-label sr-only">Collaborateurs</label>
+							<input type="text" placeholder="Collaborateurs" class="form-control col-md-11" id="colls">
+						</div>
+						<div class="form-group row" id="listAjCol"></div>
+						<div class="modal-footer col-md-12">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+							<button type="reset" class="btn btn-danger" id="ajColReset">Reset</button>
+							<button type="button" class="btn btn-success">Envoyer</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER INCLUDE -->
+	<span id="footerInc"></span>
+	<!-- ======================**JS**===================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/projetx/brut/librairies/jQuery-3.2.1/jQuery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="/projetx/brut/librairies/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="/projetx/brut/librairies/DataTables/datatables.min.js" type="text/javascript"></script>
+	<script src="/projetx/brut/librairies/DataTables/DataTables-1.10.15/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+	<script src="/projetx/brut/librairies/moment.js-2.18.1/moment-with-locales-2.18.min.js" type="text/javascript"></script>
+	<script src="/projetx/brut/librairies/tether-1.4.0/tether-1.4.0.min.js" type="text/javascript"></script>
+	<script src="/projetx/brut/librairies/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/projetx/brut/librairies/datepicker/js/bootstrap-datepicker.min.js"></script>
+
+	<!-- CORE -->
+	<script src="/projetx/brut/js/core.js" type="text/javascript"></script>
+	<!-- CURRENT INTERFACE JS -->
+	<script src="/projetx/brut/js/taches.js"></script>
+</body>
+</html>

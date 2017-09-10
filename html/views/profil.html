@@ -1,0 +1,122 @@
+
+        <!DOCTYPE html>
+        <html>
+        	<head>
+        		<meta charset="utf-8">
+        		<title>Profil</title>
+        		<!-- ======================**CSS**===================== -->
+        		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+        		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/jquery-ui-1.12.1/jquery-ui.min.css">
+        		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/DataTables/datatables.min.css"/>
+        		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/DataTables/DataTables-1.10.15/css/dataTables.bootstrap4.min.css"/>
+        		<link rel="stylesheet" type="text/css" href="/projetx/brut/librairies/ionicons-2.0.1/css/ionicons-2.0.1.min.css"/>
+        		<!-- CORE -->
+        		<link rel="stylesheet" type="text/css" href="/projetx/brut/css/core.css">
+        		<!-- CURRENT INTERFACE CSS -->
+        		<link rel="stylesheet" type="text/css" href="/projetx/brut/css/profil.css">
+        	</head>
+        	<body>
+        		<!-- NAVBAR INCLUDE -->
+        		<span id="navInc"></span>
+        		<!-- Container -->
+                <div class="container-fluid">
+                    <div class="card d-flex justify-content-start">
+                        <h4 class="card-header bg-primary text-white">Mon profil</h4>
+                        <div class="card-body" style="padding-top: 20px;">
+                            <div class="card-deck ">
+                            <div class="container col-lg-6">
+                                <div class="card" id="infoPerso">
+                                    <div class="card-header  ">
+                                        <h5>Mes informations personelles</h5>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <!--  -->
+                                                    <div class="text-center" style="margin-bottom: 30px">
+                                                        <img src="http://via.placeholder.com/125" class="avatar rounded-circle" alt="avatar">
+                                                        <h6>Uploader une photo différente...</h6>
+                                                        <input type="file" class=".form-control-file" accept="image/*">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-3 control-label">Nom</label>
+                                                    <div class="col-lg-8">
+                                                        <input class="form-control" type="text" value="Willis">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-3 control-label">Prénom</label>
+                                                    <div class="col-lg-8">
+                                                        <input class="form-control" type="text" value="Bruce">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-3 control-label">Email:</label>
+                                                    <div class="col-lg-8">
+                                                        <input class="form-control" type="text" value="bruce.w.584@gmail.com">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-3 control-label">Mot de passe:</label>
+                                                    <div class="col-md-8">
+                                                        <input class="form-control" type="password" value="11111122333">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-3 control-label">Confirmer mot de passe:</label>
+                                                    <div class="col-md-8">
+                                                        <input class="form-control" type="password" value="11111122333">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-3 control-label">Compétences</label>
+                                                    <div class="col-md-8">
+                                                        <textarea class="form-control" rows="3">PHP, JS, Jquery, HTML, CSS</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-md-3 control-label"></label>
+                                                    <div class="col-md-8">
+                                                        <input type="button" class="btn btn-success float-right" value="Sauvegarder">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container col-lg-6">
+                                <table class="table table-responsive table-striped" id="table-amis-coll">
+                                    <thead>
+                                        <tr>
+                                            <th>Colaborateur</th>
+
+                                            <th>E-mail</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                </div>
+
+        			<!-- FOOTER INCLUDE -->
+        			<span id="footerInc"></span>
+        			<!-- ======================**JS**===================== -->
+        			<!-- Placed at the end of the document so the pages load faster -->
+        			<script src="/projetx/brut/librairies/jQuery-3.2.1/jQuery-3.2.1.min.js" type="text/javascript"></script>
+        			<script src="/projetx/brut/librairies/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        			<script src="/projetx/brut/librairies/DataTables/datatables.min.js" type="text/javascript"></script>
+        			<script src="/projetx/brut/librairies/DataTables/DataTables-1.10.15/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+        			<script src="/projetx/brut/librairies/moment.js-2.18.1/moment-with-locales-2.18.min.js" type="text/javascript"></script>
+        			<script src="/projetx/brut/librairies/tether-1.4.0/tether-1.4.0.min.js" type="text/javascript"></script>
+        			<script src="/projetx/brut/librairies/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+        			<!-- CORE -->
+        			<script src="/projetx/brut/js/core.js" type="text/javascript"></script>
+        			<!-- CURRENT INTERFACE JS -->
+        			<script src="/projetx/brut/js/profil.js"></script>
+
+        		</body>
+        	</html>
