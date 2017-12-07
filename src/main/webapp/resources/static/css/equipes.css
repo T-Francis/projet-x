@@ -1,0 +1,22 @@
+.avatar{
+	width: 40px;
+}
+.position {
+float: none;
+}
+.avatar-liste{
+	width: 30px;
+	cursor: pointer;
+}
+.member-card{
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#equipe1,#equipe2,#equipe3,#equipe4{
+	padding: 25px;
+}
