@@ -21,9 +21,7 @@
 		<!-- INTERFACE CONTAINER -->
 		<div class="container-fluid">
 			<!-- MESSAGE TEST DEFINI DANS LE HomeController -->	
-			<div class="text-center">
-				<c:out value="${ UserJustRegisteredEmail }" />
-			</div>
+			<div class="text-center"></div>
 			<!-- INTRO JUMBO -->
 			<div class="container text-center jumbotron" style="background: rgba(249,249,249, 0.5);" id="jumboD">
 				<h1 class="jumbotron-heading">Projet-X</h1>

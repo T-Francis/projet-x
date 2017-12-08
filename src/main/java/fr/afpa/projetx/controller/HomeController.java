@@ -1,5 +1,7 @@
 package fr.afpa.projetx.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +28,12 @@ public class HomeController {
 		ModelAndView model = new ModelAndView("index");	
 		
 		model.addObject("user", new User());
-				
+		
 		return model;
 	}
 		
 	@PostMapping(value="/register")
-    public String validateRegister(@Valid @ModelAttribute User user, BindingResult result, @RequestParam("passwordConfirm") String passwordConfirm, Model model) {
+    public String validateRegister(@Valid @ModelAttribute User user, BindingResult result, @RequestParam("passwordConfirm") String passwordConfirm, Model model, HttpServletRequest request) {
 
 		if(userService.findByEmail(user.getEmail()) != null) result.rejectValue("email", "email.errors", user.getEmail()+" is already taken");
 		
@@ -45,7 +47,8 @@ public class HomeController {
 		} else {
         	userService.saveUser(user);
     		model.addAttribute("status", true);
-    		model.addAttribute("UserJustRegisteredEmail", user.getEmail());
+    		HttpSession session = request.getSession();
+    		session.setAttribute("UserJustRegisteredEmail", user.getEmail());
             return "redirect:/";
         }
     }

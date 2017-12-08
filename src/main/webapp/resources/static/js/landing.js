@@ -43,6 +43,7 @@ $(document).ready(function(){
     });
     
     checkRegisterStatus();
+    
 });
 
 function checkRegisterStatus(){
