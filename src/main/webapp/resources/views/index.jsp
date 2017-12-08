@@ -66,22 +66,27 @@
 			            
 			            <div class="form-group">
 			                <form:input type="text" class="form-control" path="lastname" placeholder="Enter lastname" />
-			                <form:errors path="lastname" cssClass="errorForm" />
+			                <form:errors path="lastname" cssClass="text-danger" />
 			            </div>
 			            
 			            <div class="form-group">
 			                <form:input type="text" class="form-control" path="firstname" placeholder="Enter firstname" />
-			                <form:errors path="firstname" cssClass="errorForm" />
+			                <form:errors path="firstname" cssClass="text-danger" />
 			            </div>
 			            
 			            <div class="form-group">
 			                <form:input type="email" class="form-control" path="email" placeholder="Enter email" />
-			                <form:errors path="email" cssClass="errorForm" />
+			                <form:errors path="email" cssClass="text-danger" />
 			            </div>
 			            
 			            <div class="form-group">
 			                <form:input type="password" class="form-control" path="password" placeholder="Enter password" />
-			                <form:errors path="password" cssClass="errorForm" />
+			                <form:errors path="password" cssClass="text-danger" />
+			            </div>
+			            
+			            <div class="form-group">
+			                <input type="password" class="form-control" name="passwordConfirm" placeholder="Confirm password" />
+			                <span class="text-danger"><c:if test="${ not empty passDontMatch }"><c:out value="${ passDontMatch }" /></c:if></span>
 			            </div>
 			            
 			            <div class="form-group">

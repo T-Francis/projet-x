@@ -13,25 +13,25 @@
 			</li>
 			<!-- Projet -->
 			<li class="nav-item">
-				<a class="nav-link" href="/projetx/demo/views/projets.html">Projets</a>
+				<a class="nav-link" href="/projetx/projets">Projets</a>
 			</li>
 			<!-- Tâches -->
 			<li class="nav-item">
-				<a class="nav-link" href="/projetx/demo/views/taches.html">Tâches</a>
+				<a class="nav-link" href="/projetx/taches">Tâches</a>
 			</li>
 			<!-- Equipes -->
 			<li class="nav-item">
-				<a class="nav-link" href="/projetx/demo/views/equipes.html">Equipes</a>
+				<a class="nav-link" href="/projetx/equipes">Equipes</a>
 			</li>
 			<!-- Documents -->
 			<li class="nav-item">
-				<a class="nav-link" href="/projetx/demo/views/documentsProjets.html">Documents</a>
+				<a class="nav-link" href="/projetx/documentsProjets">Documents</a>
 			</li>
 		</ul>
 		<ul class="navbar-nav ml-auto align-items-center">
 			<!-- Alert -->
 			<li class="nav-item">
-				<a id="alertBell" class="nav-link" onclick="showAlert()" ><span class="badge badge-pill badge-danger">2</span>&nbsp;<i class="ion-ios-bell-outline em-2" aria-hidden="true"></i></a>
+				<a id="alertBell" class="nav-link" onclick="showAlert()"><span class="badge badge-pill badge-danger">2</span>&nbsp;<i class="ion-ios-bell-outline em-2" aria-hidden="true"></i></a>
 			</li>
 			<!-- Mail alert -->
 			<li class="nav-item">

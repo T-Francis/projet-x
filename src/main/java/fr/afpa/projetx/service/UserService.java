@@ -5,6 +5,7 @@ import fr.afpa.projetx.models.User;
 import fr.afpa.projetx.service.interfaces.IUserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,12 +14,15 @@ import java.util.List;
 @Service
 @Transactional
 public class UserService implements IUserService {
-
+	
     @Autowired
     private IUserDao dao;
- 
+    
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+    
     public void saveUser(User user) {
-    	user.setPassword((user.getPassword()));
+    	user.setPassword(passwordEncoder.encode(user.getPassword()));
         dao.saveUser(user);
     }
 
