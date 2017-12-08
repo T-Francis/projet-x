@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.afpa</groupId>
-	<artifactId>afpaprojetx</artifactId>
+	<artifactId>projetx</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>HelloWorld Maven Webapp</name>
+	<name>projetx</name>
 	<url>http://maven.apache.org</url>
 
 
@@ -152,7 +152,7 @@
 	</dependencies>
 	<build>
 
-		<finalName>HelloWorld</finalName>
+		<finalName>projetx</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -172,6 +172,18 @@
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
 						<warName>projetx</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
+				</plugin>
+				<!-- Deployment PLUGIN -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>tomcat-maven-plugin</artifactId>
+					<configuration>
+						<url>http://10.111.61.105:8080/manager/text</url>
+						<server>tomcatCredentials</server>
+						<path>/projetx</path>
+						<!-- update settings on true to allow "re-deployment" without undeploying the application -->
+						<update>true</update>
 					</configuration>
 				</plugin>
 			</plugins>
