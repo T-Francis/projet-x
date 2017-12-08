@@ -22,7 +22,7 @@
 		<div class="container-fluid">
 			<!-- MESSAGE TEST DEFINI DANS LE HomeController -->	
 			<div class="text-center">
-				${message}			
+				<c:out value="${ UserJustRegisteredEmail }" />
 			</div>
 			<!-- INTRO JUMBO -->
 			<div class="container text-center jumbotron" style="background: rgba(249,249,249, 0.5);" id="jumboD">
@@ -44,10 +44,10 @@
 					<form id="user" action="/projetx/resources/static/views/tableauDeBord.html" method="POST">
 						<div class="card-block">
 							<div class="form-group">
-								<input id="pseudo" name="pseudo" placeholder="Pseudo" type="text" class="form-control" value="Dominique" />
+								<input id="email" name="email" placeholder="Email" type="email" class="form-control" value="<c:out value="${ UserJustRegisteredEmail }" />" />
 							</div>
 							<div class="form-group">
-								<input id="password" name="password" placeholder="Mot de Passe" type="password" class="form-control" value="123456789" />
+								<input id="password" name="password" placeholder="Mot de Passe" type="password" class="form-control" value="" />
 							</div>
 							<button class="btn btn-primary pull-left reset" type="button">Identifiants Oubliés</button>
 							<!-- <button class="btn btn-primary pull-left inscriptionB" type="button">Inscription</button> -->
@@ -90,7 +90,7 @@
 			            </div>
 			            
 			            <div class="form-group">
-			                <button type="submit" class="btn bg-success">Register</button>
+			                <button type="submit" class="btn bg-success" id="RegisterBtn">Register</button>
 			                <button type="reset" class="btn bg-danger">Reset</button>
 			            </div>
 			            
@@ -124,12 +124,12 @@
 						<div class="form-group">
 							<input type="text" id="resetField" placeholder="E-mail" class="form-control">
 						</div>
-						<button class="btn btn-success  float-right" type="submit">Envoyer</button>
+						<button class="btn btn-success float-right" type="submit">Envoyer</button>
 					</form>
 				</div>
 			</div>
 			
-			<div id="modal" class="modal fade">
+			<div id="modal" class="modal fade" data-toggle="modal" >
 			<div class="modal-dialog" role="document">
 				<div class="alert alert-success" role="alert">
 				  <strong>Welcome</strong>

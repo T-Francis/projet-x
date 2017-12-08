@@ -26,15 +26,14 @@ public class HomeController {
 		ModelAndView model = new ModelAndView("index");	
 		
 		model.addObject("user", new User());
-		
-		model.addObject("message", "it works !");
-		
+				
 		return model;
 	}
 		
 	@PostMapping(value="/register")
     public String validateRegister(@Valid @ModelAttribute User user, BindingResult result, @RequestParam("passwordConfirm") String passwordConfirm, Model model) {
 
+		if(userService.findByEmail(user.getEmail()) != null) result.rejectValue("email", "email.errors", user.getEmail()+" is already taken");
 		
 		if(result.hasErrors()) {
     		model.addAttribute("status", false);
@@ -46,6 +45,7 @@ public class HomeController {
 		} else {
         	userService.saveUser(user);
     		model.addAttribute("status", true);
+    		model.addAttribute("UserJustRegisteredEmail", user.getEmail());
             return "redirect:/";
         }
     }

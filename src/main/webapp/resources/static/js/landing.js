@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-	
-
     var modalIsDisplayed = true;
     rngLanding= "/projetx/demo/images/landing/"+Math.floor((Math.random() * 3))+".jpg";
 
@@ -36,7 +34,7 @@ $(document).ready(function(){
         $('#resetP').hide();
         $('#connexionForm').slideToggle("slow");
     });
-
+    
     $(".reset").on("click", function(){
         $('#connexionForm').hide();
 
@@ -45,15 +43,13 @@ $(document).ready(function(){
     });
     
     checkRegisterStatus();
-    
 });
 
 function checkRegisterStatus(){
 	//the status variable is defined by an EL condition in the index.jsp
 	if (status === true){
-		console.log("reste plus qu'a affiche le long et son nom")
-	}else{
-		$('.inscriptionB').click();	
+		$('.connexionB').click();
+	} else{
+		$('.inscriptionB').click();
 	}
-		
 }

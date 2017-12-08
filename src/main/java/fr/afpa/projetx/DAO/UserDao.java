@@ -22,6 +22,13 @@ public class UserDao extends AbstractDao<Long, User> implements IUserDao {
     	User user = getByKey((Long) id);      
         return user;
     }
+    
+    public User findByEmail(String email) {
+    	Query query = getSession().createQuery("from User where email = :eMail");
+    	query.setParameter("eMail", email);
+    	User user = (User) query.uniqueResult();
+    	return user;
+    }
    
     public List<User> findAllUser() {
     	Query query = getSession().createQuery(

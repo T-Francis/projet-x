@@ -33,6 +33,10 @@ public class UserService implements IUserService {
 	public List<User> findAllUser() {
 		return dao.findAllUser();
 	}
+	
+	public User findByEmail(String email) {
+		return dao.findByEmail(email);
+	}
 
   
 

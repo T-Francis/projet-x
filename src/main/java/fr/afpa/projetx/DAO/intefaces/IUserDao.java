@@ -13,4 +13,5 @@ public interface IUserDao {
 
     void saveUser(User user);
 
+    public User findByEmail(String email);
 }
