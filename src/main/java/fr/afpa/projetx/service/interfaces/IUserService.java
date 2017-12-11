@@ -13,5 +13,7 @@ public interface IUserService {
     void saveUser(User user);
     
     public User findByEmail(String email);
+    
+    public boolean checkLogin(String email, String password);
 
 }

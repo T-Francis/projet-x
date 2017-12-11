@@ -44,6 +44,8 @@ $(document).ready(function(){
     
     checkRegisterStatus();
     
+    checkLoginStatus();
+
 });
 
 function checkRegisterStatus(){
@@ -52,5 +54,11 @@ function checkRegisterStatus(){
 		$('.connexionB').click();
 	} else{
 		$('.inscriptionB').click();
+	}
+}
+
+function checkLoginStatus(){
+	if (statusLogin === false){
+		$('.connexionB').click();
 	}
 }

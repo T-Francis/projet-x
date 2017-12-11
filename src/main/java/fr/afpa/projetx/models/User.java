@@ -40,9 +40,7 @@ public class User implements java.io.Serializable {
     private Set<Task> taskList = new HashSet<>();
     private Set<Role> roles = new HashSet<Role>();
 
-    public User(){ 
-    
-    }
+    public User(){}
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -76,8 +74,8 @@ public class User implements java.io.Serializable {
 	}
 
     @NotEmpty(message = "Please enter your email")
-    @Pattern(regexp = "[A-Za-z0-9._-]+@[A-Za-z0-9.-]{2,}.[A-Za-z]{2,}", message = "The email must respect this form : xxxxx@yyyyy.zz")
-    @Column(name = "email",unique=true)
+    @Pattern(regexp = "[A-Za-z0-9._-]+@[A-Za-z0-9.-]{2,}.[A-Za-z]{2,}", message = "The email format is incorrect")
+    @Column(name = "email",unique = true)
 	public String getEmail() {
 		return email;
 	}

@@ -5,6 +5,7 @@ import fr.afpa.projetx.models.User;
 import fr.afpa.projetx.service.interfaces.IUserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,6 +39,12 @@ public class UserService implements IUserService {
 		return dao.findByEmail(email);
 	}
 
-  
+	public boolean checkLogin(String email, String password) {
+		User u = this.findByEmail(email);
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		
+		if(u != null && encoder.matches(password, u.getPassword())) return true;
+		else return false;
+	}
 
 }
