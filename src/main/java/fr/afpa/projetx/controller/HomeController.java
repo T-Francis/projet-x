@@ -61,19 +61,19 @@ public class HomeController {
 	
 	@PostMapping(value="/login")
     public String validateLogin(@RequestParam("email") String email, @RequestParam("password") String pass, Model model) {
-		User u = userService.findByEmail(email);
-		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		
-		if(encoder.matches(pass, u.getPassword())) {
-			model.addAttribute("loggedInUser", u);
+		if(userService.checkLogin(email, pass)) {
+			model.addAttribute("loggedInUser", userService.findByEmail(email));
+			model.addAttribute("statusLogin", true);
 			return "redirect:/overview";
 		} else {
 			model.addAttribute("invalidCredentials", "Invalid credentials");
-			return "redirect:/";
+			model.addAttribute("user", new User());
+			model.addAttribute("statusLogin", false);
+			return "index";
 		}
     }
 	
-	@RequestMapping(value="/logout", method = RequestMethod.GET)
+	@GetMapping(value="/logout")
 	public String validateLogout(SessionStatus session) {
 		session.setComplete();
 		return "redirect:/";

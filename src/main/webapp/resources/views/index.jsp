@@ -42,15 +42,15 @@
 					<form id="user" action="/projetx/login" method="POST">
 						<div class="card-block">
 							<div class="form-group">
-								<input id="email" name="email" placeholder="Email" type="email" class="form-control" value="<c:out value="${ UserJustRegisteredEmail }" />" />
+								<input id="email" name="email" placeholder="Email" required="required" type="email" class="form-control" value="<c:out value="${ UserJustRegisteredEmail }" />" />
 							</div>
 							<div class="form-group">
-								<input id="password" name="password" placeholder="Mot de Passe" type="password" class="form-control" value="" />
+								<input id="password" name="password" placeholder="Mot de Passe" required="required" type="password" class="form-control" value="" />
 								<span class="text-danger"><c:out value="${ invalidCredentials }" /></span>
 							</div>
 							<button class="btn btn-primary pull-left reset" type="button">Identifiants Oubliés</button>
 							<!-- <button class="btn btn-primary pull-left inscriptionB" type="button">Inscription</button> -->
-							<button class="btn btn-success  float-right connexionB">Connexion</button>
+							<button type="submit" id="connexionLogin" class="btn btn-success float-right">Connexion</button>
 						</div>
 					</form>
 				</div>
@@ -128,7 +128,7 @@
 				</div>
 			</div>
 			
-			<div id="modal" class="modal fade" data-toggle="modal" >
+			<div id="modalLoginSuccess" class="modal fade" data-toggle="modal" >
 			<div class="modal-dialog" role="document">
 				<div class="alert alert-success" role="alert">
 				  <strong>Welcome</strong>
@@ -153,6 +153,20 @@
 				</script>
 			 </c:otherwise>
 		</c:choose>
+		
+		<c:choose>
+			<c:when test="${statusLogin}">
+				<script>
+					statusLogin = true;
+				</script>
+			</c:when>
+			 <c:otherwise>
+				<script>
+					statusLogin = false;
+				</script>
+			 </c:otherwise>
+		</c:choose>
+		
 		<script src="/projetx/resources/static/js/landing.js"></script>		
 	</body>
 </html>
