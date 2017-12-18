@@ -5,15 +5,13 @@ import fr.afpa.projetx.models.User;
 import java.util.List;
 
 public interface IUserService {
+	
+    void registerNewUser(User user);
 
 	List<User> findAllUser();
 
     User findById(long id);
-
-    void saveUser(User user);
     
     public User findByEmail(String email);
     
-    public boolean checkLogin(String email, String password);
-
 }
