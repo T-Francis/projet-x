@@ -16,6 +16,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name= "avatars", catalog = "projetx")
 public class Avatar implements java.io.Serializable  {
+
+	private static final long serialVersionUID = 1L;
 	
 	private Long idAvatar;
 	private String url;
@@ -23,8 +25,7 @@ public class Avatar implements java.io.Serializable  {
 	/**
 	 * Constructor
 	 */
-	public Avatar() {
-	}
+	public Avatar() {}
 	
 	@Id
 	@Column(name="id_avatar")

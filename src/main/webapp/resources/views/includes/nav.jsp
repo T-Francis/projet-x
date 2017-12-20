@@ -43,7 +43,7 @@
 			</li>
 			<!-- Profil -->
 			<li class="nav-item">
-				<div class="chip"><a class="chipLink" href="/projetx/profile"><img src="" width="50" height="50"> <c:out value="${ loggedInUser.lastname }" /> </a></div>
+				<div class="chip"><a class="chipLink" href="/projetx/profile"><img src="" width="50" height="50">${ loggedInUser.firstname } ${ loggedInUser.lastname } </a></div>
 				<!-- <a class="nav-link" ">Profil</a> -->
 			</li>
 			<!-- Log out -->

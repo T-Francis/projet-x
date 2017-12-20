@@ -142,6 +142,12 @@
 			<version>${mysql.connector.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
 		<!-- joda time AJOUT FRANCIS -->
 		<dependency>
 			<groupId>joda-time</groupId>
@@ -182,7 +188,8 @@
 						<url>http://10.111.61.105:8080/manager/text</url>
 						<server>tomcatCredentials</server>
 						<path>/projetx</path>
-						<!-- update settings on true to allow "re-deployment" without undeploying the application -->
+						<!-- update settings on true to allow "re-deployment" without undeploying 
+							the application -->
 						<update>true</update>
 					</configuration>
 				</plugin>

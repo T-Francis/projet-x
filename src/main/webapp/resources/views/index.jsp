@@ -1,5 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page isELIgnored="false" %> 
 <!DOCTYPE html>
 <html>
@@ -39,13 +39,13 @@
 			<div class="container-fluid col-6 col-lg-6 cols-xs-6 col-sm-6 offset-3 inscription" id="connexionForm" style="display:none;">
 				<div class="card ">
 					<h3 class="card-header card-primary">Login :</h3>
-					<form id="user" action="/projetx/login" method="POST">
+					<form action="/projetx/login" method="POST">
 						<div class="card-block">
 							<div class="form-group">
-								<input id="email" name="email" placeholder="Email" required="required" type="email" class="form-control" value="<c:out value="${ UserJustRegisteredEmail }" />" />
+								<input name="email" placeholder="Email" required="required" type="email" class="form-control" value="<c:out value="${ UserJustRegisteredEmail }" />" />
 							</div>
 							<div class="form-group">
-								<input id="password" name="password" placeholder="Mot de Passe" required="required" type="password" class="form-control" value="" />
+								<input name="password" placeholder="Mot de Passe" required="required" type="password" class="form-control" value="" />
 								<span class="text-danger"><c:out value="${ invalidCredentials }" /></span>
 							</div>
 							<button class="btn btn-primary pull-left reset" type="button">Identifiants Oubliés</button>

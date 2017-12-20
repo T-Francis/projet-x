@@ -38,4 +38,8 @@ public class UserService implements IUserService {
     	user.setPassword(encodedPass);    	
         dao.saveUser(user);
     }
+
+	public void updateUser(User u) {
+		dao.saveUser(u);
+	}
 }

@@ -44,7 +44,7 @@ public class User implements java.io.Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_user")
+    @Column(name = "id_user", updatable=false)
     public Long getIdUser() {
 		return idUser;
 	}
@@ -53,7 +53,6 @@ public class User implements java.io.Serializable {
 		this.idUser = id_user;
 	}
 	
-	@NotEmpty(message = "Please enter your firstname")
     @Column(name = "firstname")
 	public String getFirstname() {
 		return firstname;
@@ -63,7 +62,6 @@ public class User implements java.io.Serializable {
 		this.firstname = firstname;
 	}
 	
-	@NotEmpty(message = "Please enter your lastname")
     @Column(name = "lastname")
 	public String getLastname() {
 		return lastname;
@@ -73,7 +71,6 @@ public class User implements java.io.Serializable {
 		this.lastname = lastname;
 	}
 
-    @NotEmpty(message = "Please enter your email")
     @Pattern(regexp = "[A-Za-z0-9._-]+@[A-Za-z0-9.-]{2,}.[A-Za-z]{2,}", message = "The email format is incorrect")
     @Column(name = "email",unique = true)
 	public String getEmail() {
@@ -84,7 +81,12 @@ public class User implements java.io.Serializable {
 		this.email = email;
 	}
 	
-    @NotEmpty(message = "Please enter your password")
+    @Override
+	public String toString() {
+		return "User [idUser=" + idUser + ", firstname=" + firstname + ", lastname=" + lastname + ", email=" + email
+				+ ", password=" + password + ", skill=" + skill + "]";
+	}
+
     @Size(min = 6, message = "Your password must be at least 6 characters long")
     @Column(name = "password")
 	public String getPassword() {

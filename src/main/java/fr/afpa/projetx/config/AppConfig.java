@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -34,6 +35,12 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 	    return new BCryptPasswordEncoder();
+	}
+	
+	@Bean(name = "multipartResolver")
+	public CommonsMultipartResolver multipartResolver() {
+	    CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+	    return multipartResolver;
 	}
 
 }
