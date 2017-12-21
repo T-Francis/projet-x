@@ -11,11 +11,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import fr.afpa.projetx.models.User;
 import fr.afpa.projetx.service.interfaces.IUserService;
 
 @Controller
+@SessionAttributes("avatarUrl")
 public class ProfileController {
 	
 //	private static String AVATARS_FOLDER = "C:\\Users\\34011-79-04\\jee-workspace\\projet-x\\target\\projetx\\resources\\images\\avatars\\";

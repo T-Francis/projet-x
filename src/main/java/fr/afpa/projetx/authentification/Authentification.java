@@ -54,7 +54,7 @@ public class Authentification {
 		if(authentificationService.checkLogin(email, pass)) {
 			model.addAttribute("loggedInUser", userService.findByEmail(email));
 			model.addAttribute("statusLogin", true);
-			return "redirect:/overview";
+			return "redirect:/profile";
 		} else {
 			model.addAttribute("invalidCredentials", "Invalid credentials");
 			model.addAttribute("user", new User());
