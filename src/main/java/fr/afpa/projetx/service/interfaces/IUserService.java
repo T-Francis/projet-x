@@ -16,4 +16,6 @@ public interface IUserService {
     
     public void updateUser(User u);
     
+    public String decodeBlob(byte[] imageByte);
+    
 }

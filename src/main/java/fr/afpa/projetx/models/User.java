@@ -6,19 +6,15 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "users")
@@ -34,8 +30,7 @@ public class User implements java.io.Serializable {
     private String password;
     private String skill;
     private Integer enabled;
-    private String imgUrl;  
-    private Avatar avatar;
+    private byte[] photo;
     private Set<Project> projectList = new HashSet<>();
     private Set<Task> taskList = new HashSet<>();
     private Set<Role> roles = new HashSet<Role>();
@@ -117,23 +112,14 @@ public class User implements java.io.Serializable {
 		this.enabled = enabled;
 	}
 
-    @Column(name="image_url")
-	public String getImgUrl() {
-		return imgUrl;
-	}
-
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = imgUrl;
-	}
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_avatar", foreignKey=@ForeignKey(name="FK_users_id_avatar"))
-	public Avatar getAvatar() {
-		return avatar;
+	@Column(name = "photo")
+	public byte[] getPhoto() {
+		return photo;
 	}
 
-	public void setAvatar(Avatar avatar) {
-		this.avatar = avatar;
+	public void setPhoto(byte[] photo) {
+		this.photo = photo;
 	}
 	
     @ManyToMany
@@ -174,5 +160,6 @@ public class User implements java.io.Serializable {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
+
     
 }

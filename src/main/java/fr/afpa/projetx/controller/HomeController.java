@@ -21,6 +21,5 @@ public class HomeController {
 		model.addObject("user", new User());		
 		return model;
 	}
-		
 	
 }

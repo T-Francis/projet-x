@@ -41,5 +41,9 @@ public class UserDao extends AbstractDao<Long, User> implements IUserDao {
     public void saveUser(User user) {
     	persist(user);
     }
+    
+    public void updateUser(User u) {
+    	update(u);
+    }
 
 }

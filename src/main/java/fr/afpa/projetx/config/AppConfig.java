@@ -1,5 +1,8 @@
 package fr.afpa.projetx.config;
 
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +13,7 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
@@ -17,6 +21,19 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @ComponentScan(basePackages = "fr.afpa.projetx")
 public class AppConfig extends WebMvcConfigurerAdapter {
+	
+	@Autowired
+	private RequestMappingHandlerAdapter requestMappingHandlerAdapter;
+
+	/*
+	 * Empeche les parametres d'être envoyés sur la barre d'adresse lors du ' return "xyz"; ' dans les controllers
+	 */
+	
+	@PostConstruct
+	public void init() {
+	    requestMappingHandlerAdapter.setIgnoreDefaultModelOnRedirect(true);
+	}
+	
 	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();

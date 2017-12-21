@@ -31,8 +31,8 @@
 						<div class="card-body">
 							<form class="form-horizontal" role="form" method="post" action="/projetx/profile/update" enctype="multipart/form-data">
 								<div class="form-group">
-									<div class="text-center" style="margin-bottom: 30px">
-										<img src="${ loggedInUser.imgUrl }" width="70" height="70" class="" alt="avatar">
+									<div class="text-center" style="margin-top: 2%">
+										<img src="${ avatarUrl }" width="70" height="70" class="" alt="avatar">
 										<h6>Uploader une photo différente...</h6>
 										<input type="file" name="avatar" class=".form-control-file" accept="image/*">
 									</div>
@@ -50,27 +50,6 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="col-lg-3 control-label">Email:</label>
-									<div class="col-lg-8">
-										<input class="form-control" type="text" name="email" value="${ loggedInUser.email }" />
-										<c:if test="${ not empty EmailTaken }"><span class="error">${ EmailTaken }</span></c:if>
-										<c:if test="${ not empty IncorrectEmail }"><span class="error">${ IncorrectEmail }</span></c:if>
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-md-3 control-label">Mot de passe:</label>
-									<div class="col-md-8">
-										<input class="form-control" type="password" name="password" />
-									</div>
-								</div>
-								<div class="form-group row">
-									<label class="col-md-3 control-label">Confirmer mot de passe:</label>
-									<div class="col-md-8">
-										<input class="form-control" type="password" name="passwordConfirm" />
-										<c:if test="${ not empty PasswordsDontMatch }"><span class="error">${ PasswordsDontMatch }</span></c:if>
-									</div>
-								</div>
-								<div class="form-group row">
 									<label class="col-md-3 control-label">Compétences</label>
 									<div class="col-md-8">
 										<textarea class="form-control" rows="3" name="skill" >${ loggedInUser.skill }</textarea>
@@ -85,7 +64,7 @@
 							</form>
 						</div>
 					</div>
-					<table class="col-lg-6 table table-responsive table-striped" id="table-amis-coll">
+					<table class="card col-lg-6 table table-responsive table-striped" id="table-amis-coll">
 						<thead>
 							<tr>
 								<th>Photo</th>
