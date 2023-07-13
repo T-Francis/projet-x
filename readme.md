@@ -1,4 +1,8 @@
-# **Projet-X**
+# ARCHIVED
+
+Course project, no reason to keep it active
+
+## **Projet-X**
 
 ### an accessible and compréhensive project manager.
 
